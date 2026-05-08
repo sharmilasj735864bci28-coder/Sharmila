@@ -1,0 +1,15 @@
+# Read N and M from input
+n, m = map(int, input().split())
+
+# Top Half
+for i in range(1, n, 2):
+    pattern = (".|." * i).center(m, "-")
+    print(pattern)
+
+# Middle Section
+print("WELCOME".center(m, "-"))
+
+# Bottom Half
+for i in range(n-2, -1, -2):
+    pattern = (".|." * i).center(m, "-")
+    print(pattern)
