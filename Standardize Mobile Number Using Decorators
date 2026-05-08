@@ -1,0 +1,9 @@
+def wrapper(f):
+    def fun(l):
+        standardized_list = []
+        for n in l:
+            clean_num = n[-10:]
+            formatted = f"+91 {clean_num[:5]} {clean_num[5:]}"
+            standardized_list.append(formatted)       
+        return f(standardized_list)
+    return fun
