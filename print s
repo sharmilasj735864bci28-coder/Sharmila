@@ -1,0 +1,4 @@
+s = input()
+
+# Output the same string
+print(s)
