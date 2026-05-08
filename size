@@ -1,0 +1,17 @@
+def print_rangoli(size):
+    import string
+    chars = string.ascii_lowercase
+    
+    # Calculate the total width of the rangoli
+    # Formula: (size * 2 - 1) characters + (size * 2 - 2) dashes
+    width = 4 * size - 3
+    lines = []
+    
+    for i in range(size):
+        # Slice the alphabet for the current row
+        s = "-".join(chars[size-1:i:-1] + chars[i:size])
+        lines.append(s.center(width, "-"))
+    
+    # Combine top half, center, and mirrored bottom half
+    rangoli = "\n".join(lines[::-1] + lines[1:])
+    print(rangoli)
