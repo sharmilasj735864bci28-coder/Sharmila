@@ -1,0 +1,3 @@
+word = "tenet"
+result = (word + " ") * 100
+print(result.strip())
