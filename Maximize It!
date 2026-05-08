@@ -1,0 +1,8 @@
+from itertools import product
+K, M = map(int, input().split())
+lists = []
+for _ in range(K):
+    row = list(map(int, input().split()))[1:]
+    lists.append(row)
+results = (sum(x**2 for x in combo) % M for combo in product(*lists))
+print(max(results))
