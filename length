@@ -1,0 +1,5 @@
+txt = "NumeroTres"
+
+length_of_txt = len(txt)
+
+print(length_of_txt)
